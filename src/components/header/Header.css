@@ -1,0 +1,191 @@
+/* ---------------------------
+Header.css
+- HeaderMain
+- Header
+-----------------------------*/
+
+/* ---------------------------
+HeaderMain
+Descripcion: Estilos para el headerMain
+Estructura:
+   - header
+        - header_nav
+            - header_menu
+            - header_logo
+            - header_categorias
+            - header_perfil
+-----------------------------*/
+
+.header {
+    position: relative;
+}
+.header_nav {
+    border-radius: 0.625rem;
+    font-size: .9rem;
+    background-color: #00050d;
+    box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 5, 13, .5);
+    width: 75%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    position: fixed;
+    z-index: 5;
+    top: 0.625rem;
+    left: 12.5%;
+
+    /* background-color: aqua; */
+}
+.header_categorias {
+    /* background-color: azure; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.header_svg {
+    color: #fff;
+}
+.header_menu {
+    display: none;
+    cursor: pointer;
+}
+.header_logo {
+    /* background-color: rgb(85, 85, 8); */
+    width: 6.25rem;
+}
+.header_perfil {
+    /* background-color: yellowgreen; */
+    width: 1.875rem;
+    cursor: pointer;
+}
+/* ---------------------------
+Header
+Descripcion: Estilos para el Header
+Estructura:
+   - nav_ul
+        - li_cat
+        - ul_div
+            - div_ul
+                - li_sub
+-----------------------------*/
+.nav_ul {
+    background-color: #00050d;
+    padding: 0.625rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+
+    transition: all .3s ease-in-out;
+}
+.nav_ul:hover .li_cat{
+    color: #fff;
+}
+.nav_ul:hover {
+    background-color: #36455d5d;
+}
+.li_cat {
+    /* background-color: aquamarine; */
+    color: #aaa;
+}
+.ul_div {
+    background-color: #36455d;
+    border-radius: 0 0 1.25rem 1.25rem;
+    color: #fff;
+    
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    width: 25rem;
+    
+}
+.ul_div.isActive {
+    display: block;
+}
+.div_ul {
+    background-color: #36455d5d;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6.25rem, 2fr));
+    border-radius: 1.25rem;
+}
+.li_sub {
+    margin-top: 1.25rem;
+    margin-left: 1.25rem;
+}
+.menu_nav {
+    background-color: red;
+    
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* logica para hacer la parte del menu que se quita y se pone */
+@media (max-width: 850px) {
+    .header-nav {
+        padding: 0.3125rem;
+        
+        position: fixed;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.25rem;
+
+    }
+    .header_categorias.mostrar {
+        box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 5, 13, .5);
+        border-radius: 0 0 1.25rem 1.25rem;
+        background-color: #36455d;
+        position: absolute;
+        z-index: 5;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        padding: 0.625rem;
+    }
+    .header_categorias {
+        display: none;
+    }
+    .ul_div.isActive {
+        display: none;
+    }
+    .header_menu {
+        display: block;
+        margin-left: 0.625rem;
+        color: #fff;
+    }
+    .nav_ul {
+        background-color: #36455d;
+        padding: 0.625rem;
+        width: 100%;
+
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .header_perfil {
+        /* background-color: yellowgreen; */
+        width: 1.875rem;
+    }
+}

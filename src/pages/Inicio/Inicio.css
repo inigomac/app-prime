@@ -1,0 +1,423 @@
+/* ---------------------------
+Inicio.css
+- Carrousel
+- Img
+- InfoLightbox
+- CardsExpansibles2
+-----------------------------*/
+.black-body {
+    background-color: #00050d;
+} 
+/* ---------------------------
+Carrousel
+Descripcion: Estilos para el carrousel
+Estructura:
+    - carousel
+        - carrousel_container
+        - carrousel_arrow
+            - arrow_prev
+        - carrousel_ul
+            - carrousel_li
+                - carrousel_btn
+-----------------------------*/
+.carousel {
+    width: 90%;
+    /* background-color: red; */
+    margin: 10vh auto;
+    overflow: hidden;
+    
+    position: relative;
+}
+.carrousel_container {
+    /* background-color: aqua; */
+    width: 300%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    
+
+    transition: all 1s ease;
+}
+.imagenes_div {
+    position: relative;
+    /* background-color: azure; */
+    width: 100%;
+    height: 100%;
+}
+.carrousel_img {
+    /* background-color: aquamarine; */
+    height: 25rem;
+    border-radius: 0.625rem;
+}
+.carrousel_arrow {
+    width: 2rem;
+    height: 2rem;
+    /* background-color: black; */
+
+    position: absolute;
+    top: calc( 50% - 1rem );
+    color: #fff;
+    cursor: pointer;
+    display: none;
+
+    transition: transform .3s ease-in-out;
+}
+.carrousel_arrow:hover {
+    transform: scale(1.20);
+}
+.carousel:hover .carrousel_arrow {
+    display: block;
+}
+.next {
+    right: 0; 
+}
+.prev {
+    left: 0;
+}
+.carrousel_ul {
+    margin-top: 0.9375rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.carrousel_li {
+    
+}
+.carrousel_btn {
+    background-color: #7a7a7a4f;
+    width: 0.4375rem;
+    height: 0.4375rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+.carrousel_btn:hover {
+    background-color: white;
+}
+/* ---------------------------
+InfoLightbox
+Descripcion: Estilos para el infolightbox
+Estructura:
+    - container_div
+        - lig_img
+        - lig_info
+            - lig_p
+            - lig_edad
+        - lig_div
+            - btn_info
+            - btn_svg
+-----------------------------*/
+.container_div {
+    /* background-color: brown; */
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.25rem;
+
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5rem;
+}
+.lig_info {
+    /* background-color: aqua; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.lig_edad {
+    background-color:  rgba(50, 49, 49, 0.508);
+    color: #fff;
+    padding: 0.125rem;
+    font-size: .9em;
+    border-radius: 0.375rem;
+}
+.lig_p {
+    /* background-color: azure; */
+    color: #fff;
+    width: 40%;
+}
+.lig_img {
+    width: 18.75rem;
+    /* background-color: aqua; */
+}
+.lig_div {
+    /* background-color: aqua; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+.btn_info {
+    border-radius: 0.625rem;
+    color: black;
+    padding: 1.25rem;
+    background-color: #fff;
+    white-space: nowrap;
+
+    transition: transform .3s ease;
+}
+.btn_info:hover {
+    color: rgb(54, 54, 54);
+    transform: scale(1.02);
+}
+.btn_svg {
+    background-color: rgba(50, 49, 49, 0.508);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+
+    transition: transform .3s ease;
+}
+.btn_svg:hover {
+    color: black;
+    background-color: #fff;
+    transform: scale(1.1);
+}
+/* ---------------------------
+CardsExpansibles2
+Descripcion: Estilos para cada una de las cards expansibles
+
+Estructura:
+    container_card
+        card
+            card_img
+                panel
+                    panel_h2
+                    panel_btn
+                        btn_span
+                            span_play
+                        span_rpr
+                        btn_span plus
+                            span_plus
+                        btn_span
+                            span_info
+                    panel_info
+                        div_svg
+                            svg_tick
+                        info_span
+                        info_span
+-----------------------------*/
+.container_card {
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+@media(max-width: 500px) {
+    .container_card {
+        flex-flow: column;
+    }
+}
+.card:hover {
+    width: 37.5rem;
+}
+@media(max-width: 500px) {
+    .card:hover {
+        width: 95%;
+    }
+}
+.card:hover .card_img {
+    z-index: 1;
+}
+.card {
+    background-color: aqua;
+    width: 18.75rem; /* Ancho de la tarjeta */
+    height: 25rem; /* Altura inicial de la tarjeta */
+    
+    border-radius: 0.9375rem;
+
+    position: relative;
+    
+    overflow: hidden; /* Para asegurarnos de que los elementos no se desborden */
+    transition: all 0.5s ease; /* Transición suave de altura */
+}
+.card.primera {
+    background-image: url(./../../../public/assets/assets_exclusivas/peli-50centexpend4bles-port.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.card.segunda {
+    background-image: url(./../../../public/assets/assets_exclusivas/peli-anatomyofafall-port.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.card.tercera {
+    background-image: url(./../../../public/assets/assets_exclusivas/peli-federer-port.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.card.cuarta {
+    background-image: url(./../../../public/assets/assets_exclusivas/peli-landofband-port.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.card_img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.card_img.primera {
+    background-image: url(./../../../public/assets/assets_exclusivas/peli-50centexpend4bles.baner.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.card_img.segunda {
+    background-image: url(./../../../public/assets/assets_exclusivas/peli-anatomyofafall-baner.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.card_img.tercera {
+    background-image: url(./../../../public/assets/assets_exclusivas/peli-federer-baner.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.card_img.cuarta {
+    background-image: url(./../../../public/assets/assets_exclusivas/peli-landofband-baner.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+/* Todo lo referente a los paneles de info de la card exclusivos */
+.card:hover .panel {
+    opacity: 1;
+    visibility: visible;
+}
+
+.panel {
+
+    position: absolute;
+    bottom: 1.875rem;
+    left: 1.875rem;
+    /* background-color: rgba(100, 149, 237, 0.8); */
+    color: white; /* Texto blanco */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+   
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+
+    font-family: 'amazonbold';
+}
+.panel_h2 {
+    width: 100%;
+    height: 3.75rem;
+}
+.merce {
+    background-image: url(./../../../public/assets/assets_lightbox/peli-losmercenarios-titulo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.anato {
+    background-image: url(./../../../public/assets/assets_lightbox/peli-sleepingdogs-titulo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.fede {
+    background-image: url(./../../../public/assets/assets_lightbox/peli-amcelinedion-titulo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.land {
+    background-image: url(./../../../public/assets/assets_lightbox/peli-landofbad-titulo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.panel_btn {
+    /* background-color: purple; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    margin-top: 0.625rem;
+}
+
+.btn_span {
+    background-color: #3c3c3c55;
+    padding: 1.25rem;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.play {
+    color: #303030;
+    background-color: #fff;
+}
+.plus {
+    padding: 0.625rem;
+}
+.info {
+    padding: 0.9375rem;
+}
+.span_play {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.span_rpr {
+    font-size: 1.1em;
+}
+.span_plus {
+}
+.span_info {
+
+}
+.panel_info {
+    margin-top: 0.625rem;
+    /* background-color: violet; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+.div_svg {
+    background-color: #007bff;
+    border-radius: 50%;
+}
+.svg_tick {
+    color: none;
+}
+.info_span {
+    display: block;
+    /* background-color: aqua; */
+}
+.edad {
+    background-color: #3030309c;
+    padding: 0.125rem;
+    border-radius: 0.375rem;
+}

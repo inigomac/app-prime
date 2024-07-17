@@ -1,0 +1,16 @@
+/* ---------------------------
+Titulo.css
+Descripcion: Los estilos para los titulos de la pagina inicio
+Estructura: 
+    - Card_h2
+        - Card_h2_span
+-----------------------------*/
+
+.card_h2 {
+    font-family: 'amazonbold';
+    color: #fff;
+    margin: 1.25rem 0px 1.25rem 3.125rem;
+}
+.card_h2_span {
+    color: #0186ff ;
+}

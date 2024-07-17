@@ -1,0 +1,273 @@
+/* ---------------------------
+Login.css
+- Login
+- MensajeError
+- IniciarSesion
+- Footer
+-----------------------------*/
+
+/* ---------------------------
+Login
+Descripcion: Estilos para el login
+Estructura:
+    - login
+        - login_div
+-----------------------------*/
+.login {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 1.25rem;
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem;
+
+    position: relative;
+    /* background-color: red; */
+
+    font-size: .9rem;
+}
+.login_pct {
+    /* background-color: #FDD815; */
+    object-fit: contain;
+    width: 9.375rem;
+}
+/* ---------------------------
+IniciarSesion
+Descripcion: Estilos para el componente de iniciarsesion
+Estructura:
+    - login_div
+        - div_form
+            - form_h2
+            - form_usuario
+                - usuario_p
+                - usuario_input
+            - form_contraseña
+                - contraseña_p
+                - contraseña_input
+                - form_terminos
+                - form_btn
+                - form_ayuda
+            - div_nuevo
+                - nuevo_a
+                - nuevo_p
+-----------------------------*/
+.login_div {
+    /* background-color: aqua; */
+    margin: 0 auto;
+    width: 25rem;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+}
+@media( max-width: 500px ) {
+    .login_div {
+        width: 18.75rem;
+    }
+}
+.div_form {
+   /* background-color: azure; */
+
+   border-radius: .625rem;
+   border: 1px solid rgba(148, 148, 148, 0.455);
+
+   display: flex;
+   flex-flow: column;
+   justify-content: center;
+   align-items: flex-start;
+   padding: 1.25rem;
+   gap: .9375rem;
+}
+.form_h2 {
+    /* background-color: blue; */
+    font-size: 1.8rem;
+}
+.form_usuario {
+    /* background-color: yellow; */
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .3125rem;
+}
+.usuario_p {
+    width: 100%;
+}
+.usuario_input {
+    /* background-color: aqua; */
+    width: 100%;
+    padding: .4375rem;
+    border-radius: .1875rem;
+    border: 1.9px solid rgba(84, 84, 84, 0.639);
+    box-shadow: inset 0px .03125rem .125rem 0px rgba(0,0,0,0.75);
+}
+.usuario_input:focus {
+    box-shadow: 0px 0px .125rem .1875rem rgba(143,207,230,1);
+}
+.form_contraseña {
+    /* background-color: blueviolet; */
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .3125rem;
+}
+.contraseña_p {
+    width: 100%;
+}
+.contraseña_input {
+    width: 100%;
+    padding: .4375rem;
+    border-radius: .1875rem;
+    border: 1.9px solid rgba(84, 84, 84, 0.639);
+    box-shadow: inset 0px .03125rem .125rem 0px rgba(0,0,0,0.75);
+}
+.contraseña_input:focus {
+    box-shadow: 0px 0px .125rem .1875rem rgba(143,207,230,1);
+}
+.form_btn {
+    background-color: #FDD815;
+    box-shadow: 0px 0px .25rem .03125rem rgba(46, 46, 46, 0.409);
+    width: 100%;
+    padding: .375rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.form_terminos {
+    /* background-color: violet; */
+    font-size: .8rem;
+}
+.form_ayuda {
+    /* background-color: turquoise; */
+    font-size: .8rem;
+}
+.div_nuevo {
+    /* background-color: bisque; */
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+    
+}
+.nuevo_p::after {
+    /* Con este ::after quiero hacer la linea fina que separa dos componentes */
+    display: block;
+    content: "";
+    height: 1px;
+    width: 18.75rem;
+    background-color: rgba(121, 121, 121, 0.407); 
+    position: absolute;
+    z-index: -1;
+    left: -34%;
+    top: .5625rem;
+}
+.nuevo_p {
+    background-color: white;
+    padding: 0px .625rem;
+    position: relative;
+    text-align: center;
+    color: rgb(107, 107, 107);
+}
+.nuevo_a {
+    /* background-color: #FDD815; */
+    width: 100%;
+    padding: .375rem;
+    border-radius: .5rem;
+    border: 1px solid rgba(159, 156, 156, 0.631);
+    color: black;
+    box-shadow: 0px 0px .3125rem .03125rem rgba(100, 100, 100, 0.305);
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+
+}
+a {
+    color: #0066c0;
+}
+/* ---------------------------
+MensajeError
+Descripcion: Estilos para el componente de MensajeError que solo se ejecuta cuando el login no coincide
+Estructura:
+    - error_ul
+        - error_title
+        - error_li
+-----------------------------*/
+.error_ul {
+    border: 1px solid rgb(172, 10, 10);
+    padding: .9375rem;
+    border-radius: .625rem;
+    box-shadow: 0 0 0 .25rem #fcf4f4 inset;
+}
+.error_title {
+    font-size: 1.1rem;
+    color: rgb(172, 10, 10);
+}
+.error_li {
+    font-size: .8rem;
+}
+/* ---------------------------
+Footer
+Descripcion: Estilos para el componente de Footer
+Estructura:
+    - lfooter_div
+        - lfooter_ul
+            - lfooter_li
+            - lfooter_p
+-----------------------------*/
+.lfooter_div {
+    position: fixed;
+    width: 100%;
+    min-height: 12.5rem;
+    bottom: 0;
+    left: 0;
+    /* background-color: #FDD815; */
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.lfooter_ul {
+/* background-color: aqua; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+}
+.lfooter_li {
+    font-size: .7rem;
+    color: #0066c0;
+}
+.lfooter_p {
+    /* background-color: rgb(17, 255, 0); */
+    margin-bottom: 3.75rem;
+    font-size: .7rem;
+    color: #555;
+}
+.lfooter_div::after {
+    display: block;
+    content: '';
+    height: 2.75rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .14), rgba(0, 0, 0, .03) 3px, transparent);;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}

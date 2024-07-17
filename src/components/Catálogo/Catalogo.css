@@ -1,0 +1,176 @@
+/* ---------------------------
+Inicio.css
+- Catalogo
+- Pelicula
+- CatalogoInfo
+- BotonesCatalogo
+-----------------------------*/
+
+/* ---------------------------
+Catalogo
+Descripcion: Estilos para el catalogo
+Estructura:
+    - catalogo
+-----------------------------*/
+.catalogo {
+    width: 90%;
+    margin: 0px auto 0px;
+    /* background-color: azure; */
+    min-height: 37.5rem;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+    gap: 1.875rem;
+}
+/* ---------------------------
+Pelicula
+Descripcion: Estilos para cada pelicula del catalogo inferior
+Estructura:
+    - div_catalogo
+        - catalogo_img
+        - catalogo_comprar
+            - svg_comprar
+            - catalogo_txt
+-----------------------------*/
+.div_catalogo {
+    color: aliceblue;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .625rem;
+
+    position: relative;
+}
+.catalogo_img {
+    transition: all .3s ease;
+    /* background-color: rgb(158, 36, 192); */
+    border-radius: .75rem;
+    width: 100%;
+}
+/* .div_catalogo:hover .catalogo_img {
+    transform: scale(1.1);
+} */
+.catalogo_comprar {
+    /* background-color: yellow; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .625rem;
+
+}
+.catalogo_txt {
+    /* background-color: blueviolet; */
+    font-family: 'amazonbold';
+    font-size: 1.05em;
+}
+.svg_comprar {
+    margin-bottom: 2px;
+    color: rgb(255, 213, 0);
+}
+/* ---------------------------
+CatalogoInfo
+Descripcion: Estilos para cada informacion del catalogo inferior
+Estructura:
+    - catalogo_info
+        - info_titulo
+        - info_div
+            - span_txt
+        - info_descr
+-----------------------------*/
+.catalogo_info {
+    background-color: #00050d;
+    box-shadow: 0 .25rem .5rem .125rem rgba(0, 5, 13, .5);
+    border-radius: .75rem;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    left: 0;
+
+
+    opacity: 0;
+    display: none;
+    transition: all .3s ease;
+
+
+}
+.catalogo_info.isActive {
+    opacity: 1;
+   display: block;
+}
+.info_titulo {
+    /* background-color: beige; */
+    margin: 1.25rem 0px .625rem 1.25rem;
+    font-family: 'amazonbold';
+    font-size: 1.3em;
+}
+.info_div {
+    /* background-color: blueviolet; */
+    margin: 0px 0px .625rem 1.25rem;
+    
+    color: #626262;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem;
+
+    font-family: 'amazonbold';
+    font-size: 1.1em;
+}
+/* ---------------------------
+BotonesCatalogo
+Descripcion: Estilos para los botones de la informacion del catalogo inferior
+Estructura:
+    - info_btn
+        - div_botones
+            - svg_btn
+        - div_repro
+-----------------------------*/
+.info_btn {
+    margin-top: .625rem;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem;
+}
+.div_botones {
+    background-color: rgba(89, 89, 89, 0.348);
+    padding: .3125rem;
+    border-radius: 50%;
+}
+.on {
+    padding: .9375rem;
+    background-color: #fff;
+    color: #626262;
+}
+.div_repro {
+    margin-right: 1.25rem;
+    font-size: 1.2em;
+}
+.svg_btn {
+
+}
+.span_txt {
+
+}
+.info_descr {
+    /* background-color: brown; */
+    margin: 0px 0px 1.25rem 1.25rem;
+    width: 70%;
+
+    font-family: 'amazonbold';
+    font-size: 1.2em;
+}

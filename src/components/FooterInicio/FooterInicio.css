@@ -1,0 +1,41 @@
+/* ---------------------------
+FooterInicio.css
+Descripcion: este es el footer de la pagina inicio
+Estructura : 
+    - div_inc
+        - inc_img
+        - inc_ul
+            - inc_li
+-----------------------------*/
+.div_inc {
+    /* background-color: rebeccapurple; */
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+    margin-top: 5rem;
+    margin-bottom: 1.25rem;
+}
+.inc_img {
+    width: 9.375rem;
+}
+.inc_ul {
+    /* background-color: bisque; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+    font-size: .8em;
+}
+.inc_li {
+    color: rgb(21, 87, 173);
+}
+.copy {
+    color: rgb(144, 144, 144);
+}

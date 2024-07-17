@@ -1,0 +1,49 @@
+/* ---------------------------
+Footer.css
+Descripcion: este es el footer de la pagina REGISTRO
+Estructura : 
+    - footer_div
+        - div_img
+        - div_ul
+            - ul_li
+        - div_p
+-----------------------------*/
+.footer_div {
+    width: 100vw;
+    background-color: #222222;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+}
+.div_img {
+    width: 5rem;
+    height: 5rem;
+    /* background-color: aqua; */
+    object-fit: contain;
+}
+.div_ul {
+    /* background-color: aquamarine; */
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.ul_li {
+    color: #1079AF;
+    font-size: .9em;
+}
+.div_p {
+    /* background-color: blue; */
+    color: #7F95A2;
+    font-size: .9em;
+}
+@media(max-width: 31.25rem) {
+    .div_ul {
+        flex-flow: column;
+    }
+}

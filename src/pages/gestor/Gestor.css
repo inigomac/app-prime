@@ -1,0 +1,221 @@
+/* ---------------------------
+Gestor.css
+- Gestor
+- User
+-----------------------------*/
+
+/* ---------------------------
+Gestor
+Descripcion: Estilos para el gestor
+Estructura:
+   - div_gestor
+        - gestor_h2
+        - gestor_users
+        - gestor_add
+        - gestor_añade
+            - añade_close
+            - añade_h2
+            - añade_form
+                - añade_input
+                - añade_btn
+        - gestor_modificar
+            - modificar_close
+            - modificar_h2
+            - modificar_form
+                - modificar_input
+                - modificar_btn
+    
+-----------------------------*/
+.negro-body {
+    background-color: #00050d;
+}
+.div_gestor {
+    /* background-color: aqua; */
+    margin: 6.25rem auto;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+
+    position: relative;
+}
+.gestor_h2 {
+    margin-bottom: 6.25rem;
+    font-size: 2.5em;
+    color: #fff;
+    font-family: 'amazonbold';
+}
+.gestor_add {
+    background-color: #fff;
+    padding: 0.9375rem;
+    border-radius: 0.625rem;
+    margin-top: 6.25rem;
+    cursor: pointer;
+}
+.cerrar {
+    margin-top: .625rem;
+    background-color: #004ea0;
+}
+/* Formulario de añadir nuevos */
+.gestor_añade {
+    background-color: #bfbfbf;
+    opacity: 0;
+    box-shadow: 0 0 6.25rem 0.625rem black;
+    border-radius: 0.625rem;
+
+    position: absolute;
+
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.625rem;
+    padding: 2.5rem;
+}
+.gestor_añade.isActive {
+    opacity: 1;
+    display: flex;
+}
+.añade_close {
+    position: absolute;
+    top: 0.3125rem;
+    left: 0.3125rem;
+    color: black;
+    background-color: #fff;
+    border-radius: 0.625rem;
+    padding: 0.3125rem;
+    cursor: pointer;
+}
+.añade_h2 {
+
+}
+.añade_form {
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+.añade_input {
+    background-color: rgb(251, 251, 251);
+    padding: 0.3125rem;
+    border-radius: 0.625rem;
+    border: 0.04375rem solid black;
+}
+.añade_btn {
+    background-color: #004ea0;
+    color: #fff;
+    box-shadow: 0.0625rem 0.0625rem 0.625rem 0.0625rem black;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+/* Formulario de modificaciones */
+.gestor_modificar {
+    background-color: #bfbfbf;
+    opacity: 0;
+    box-shadow: 0 0 6.25rem 0.625rem black;
+    border-radius: 0.625rem;
+
+    position: absolute;
+
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.625rem;
+    padding: 2.5rem;
+}
+.gestor_modificar.isVisible {
+    opacity: 1;
+    display: flex;
+}
+.modificar_close {
+    position: absolute;
+    top: 0.3125rem;
+    left: 0.3125rem;
+    color: black;
+    background-color: #fff;
+    border-radius: 0.625rem;
+    padding: 0.3125rem;
+    cursor: pointer;
+}
+.modificar_h2 {
+
+}
+.modificar_form {
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+.modificar_input {
+    background-color: rgb(251, 251, 251);
+    padding: 0.3125rem;
+    border-radius: 0.625rem;
+    border: 0.04375rem solid black;
+}
+.modificar_btn {
+    background-color: #004ea0;
+    color: #fff;
+    box-shadow: 0.0625rem 0.0625rem 0.625rem 0.0625rem black;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+/* Cada usuario */
+.gestor_users {
+    /* background-color: bisque; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+@media(max-width: 500px) {
+    .gestor_users {
+        flex-flow: column;
+    }
+}
+
+/* ---------------------------
+User
+Descripcion: Estilos para cada usuario
+Estructura:
+    - users_div
+        - users_img
+        - users_nombre
+        - users_btn
+-----------------------------*/
+.users_div {
+    /* background-color: aliceblue; */
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+.users_img {
+    width: 8.125rem;
+    height: 8.125rem;
+    /* background-color: rgb(23, 70, 70); */
+}
+.users_nombre {
+    color: #ffffff4e;
+    font-family: 'amazonbold';
+}
+.users_btn {
+    background-color: #fff;
+    padding: 0.625rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
