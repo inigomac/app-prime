@@ -7,7 +7,7 @@ export const FooterInicio = () => {
 
     return(
         <div className='div_inc'>
-            <img className='inc_img' src="/public/assets/logo_header.png" alt="logo de amazon prime" loading='lazy' />
+            <img className='inc_img' src="/assets/logo_header.png" alt="logo de amazon prime" loading='lazy' />
             <ul className='inc_ul'>
                 <li className='inc_li'>Términos y Aviso de privacidad</li>
                 <li className='inc_li'>Envíanos tus comentarios</li>

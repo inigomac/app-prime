@@ -30,7 +30,6 @@ export const Login = () => {
     }, [login, navigate]);
     useEffect(() => {
         let iniciorapido = JSON.parse(localStorage.getItem('usuario'))
-        console.log(iniciorapido)
         if (iniciorapido) {
             navigate('/inicio')
         }

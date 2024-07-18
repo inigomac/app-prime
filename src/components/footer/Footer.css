@@ -4,7 +4,7 @@ Descripcion: este es el footer de la pagina REGISTRO
 Estructura : 
     - footer_div
         - div_img
-        - div_ul
+        - div_ulfooter
             - ul_li
         - div_p
 -----------------------------*/
@@ -24,8 +24,8 @@ Estructura :
     /* background-color: aqua; */
     object-fit: contain;
 }
-.div_ul {
-    /* background-color: aquamarine; */
+.div_ulfooter {
+    background-color: aquamarine;
     
     display: flex;
     flex-flow: row nowrap;
@@ -43,7 +43,7 @@ Estructura :
     font-size: .9em;
 }
 @media(max-width: 31.25rem) {
-    .div_ul {
+    .div_ulfooter {
         flex-flow: column;
     }
 }

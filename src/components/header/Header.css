@@ -53,6 +53,7 @@ Estructura:
 .header_menu {
     display: none;
     cursor: pointer;
+    /* background-color: yellowgreen; */
 }
 .header_logo {
     /* background-color: rgb(85, 85, 8); */
@@ -134,9 +135,8 @@ Estructura:
 
 /* logica para hacer la parte del menu que se quita y se pone */
 @media (max-width: 850px) {
-    .header-nav {
-        padding: 0.3125rem;
-        
+    .header_nav {
+        padding: .75rem;
         position: fixed;
 
         display: flex;

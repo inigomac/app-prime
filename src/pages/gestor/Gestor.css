@@ -47,6 +47,11 @@ Estructura:
     color: #fff;
     font-family: 'amazonbold';
 }
+@media(max-width: 500px) {
+    .gestor_h2 {
+        font-size: 2em;
+    }
+}
 .gestor_add {
     background-color: #fff;
     padding: 0.9375rem;
@@ -56,7 +61,7 @@ Estructura:
 }
 .cerrar {
     margin-top: .625rem;
-    background-color: #004ea0;
+    background-color: #d41717;
 }
 /* Formulario de añadir nuevos */
 .gestor_añade {

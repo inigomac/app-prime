@@ -39,3 +39,8 @@ Estructura :
 .copy {
     color: rgb(144, 144, 144);
 }
+@media(max-width: 31.25rem) {
+    .inc_ul {
+        flex-flow: column;
+    }
+}
