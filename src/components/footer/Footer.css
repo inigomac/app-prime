@@ -25,7 +25,7 @@ Estructura :
     object-fit: contain;
 }
 .div_ulfooter {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     
     display: flex;
     flex-flow: row nowrap;
