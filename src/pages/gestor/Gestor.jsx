@@ -6,6 +6,7 @@ import { UsuarioContext } from '../../context/context'
 import { FooterInicio } from '../../components/FooterInicio/FooterInicio'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { Login } from '../login/Login'
+
 // Gestor.jsx
 // Hooks:
 // - useState , UseContext , useEffect , UseRef , useNavigate
@@ -91,7 +92,7 @@ export const Gestor = () => {
             .catch(err => console.log(err.message))
             .finally(() => controller.abort())
     }
-    const putAlumnoBtn = async (_id) => {
+    const putUsuarioBtn = async (_id) => {
         // @Hooks {setUsuarios}
         // Hace una llamada a la API
         // @param {string} http://localhost:3000/gestor a la que se realizará la solicitud PUT
@@ -106,7 +107,7 @@ export const Gestor = () => {
 
 
     }
-    const putAlumno = async (e) => {
+    const putUsuario = async (e) => {
         // @Hooks {setUsuarios}
         // Hace una llamada a la API
         // @param {string} http://localhost:3000/gestor a la que se realizará la solicitud PUT
@@ -133,7 +134,7 @@ export const Gestor = () => {
             .catch(err => console.log(err.message))
             .finally(() => controller.abort())
     }
-    const deleteAlumno = async (_id) => {
+    const deleteUsuario = async (_id) => {
         // @Hooks {setUsuarios}
         // Hace una llamada a la API
         // @param {string} http://localhost:3000/gestor a la que se realizará la solicitud DELETE
@@ -156,7 +157,7 @@ export const Gestor = () => {
 
 
     return (
-        <UsuarioContext.Provider value={{ putAlumnoBtn, deleteAlumno, HandleVisible }}>
+        <UsuarioContext.Provider value={{ putUsuarioBtn, deleteUsuario, HandleVisible }}>
             <div className='div_gestor'>
                 <h2 className='gestor_h2'>¿Quién está viendo?</h2>
                 <div className='gestor_users'>
@@ -179,7 +180,7 @@ export const Gestor = () => {
                 <div className={`gestor_modificar ${isVisible ? 'isVisible' : ''}`}>
                     <button className='modificar_close' onClick={HandleVisible}>Cerrar</button>
                     <h2 className='modificar_h2'>Modificar usuario y contraseña</h2>
-                    <form className='modificar_form' onSubmit={putAlumno} ref={actuSubmit}>
+                    <form className='modificar_form' onSubmit={putUsuario} ref={actuSubmit}>
                         <input className='modificar_input' type="hidden" name="id" placeholder='id' />
                         <input className='modificar_input' type="text" name="username" placeholder='Nombre de usuario' />
                         <input className='modificar_input' type="password" name="pass" placeholder='Contraseña' />
@@ -196,17 +197,17 @@ export const Gestor = () => {
 const User = (props) => {
     // En este componente se pinta toda la informacion de cada usuario y tambien se pasa como props las funciones
     // @params {string} username , _id
-    // @Hooks {useContext} putAlumnoBtn, deleteAlumno, HandleVisible
+    // @Hooks {useContext} putUsuarioBtn, deleteAlumno, HandleVisible
     
-    const { putAlumnoBtn, deleteAlumno, HandleVisible } = useContext((UsuarioContext))
+    const { putUsuarioBtn, deleteUsuario, HandleVisible } = useContext((UsuarioContext))
     const { username, _id } = props
 
     return (
         <div className='users_div'>
             <img className='users_img' src="/assets/adult-1.png" alt="Una imagen" />
             <p className='users_nombre'>{username}</p>
-            <button className='users_btn' onClick={() => { putAlumnoBtn(_id); HandleVisible() }}>Actualizar</button>
-            <button className='users_btn' onClick={() => deleteAlumno(_id)}>Eliminar</button>
+            <button className='users_btn' onClick={() => { putUsuarioBtn(_id); HandleVisible() }}>Actualizar</button>
+            <button className='users_btn' onClick={() => deleteUsuario(_id)}>Eliminar</button>
         </div>
     )
 }
