@@ -23,7 +23,7 @@ He aprendido a gestionar las solicitudes de mi API creando un backend con expres
 ## Autor ✒️
 **IÑIGO RIVERO GARRIDO**
 
-* [Backend] (https://api-prime.vercel.app/)
+* Backend (https://github.com/inigomac/api-prime)
 * [LinkedIn](https://www.linkedin.com/in/iñigo-rivero-garrido-01b841150?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BnlEq0IYwS2mzFyVNGUVhYQ%3D%3D)
 * [Porfolio web](inigorivero.com)
 
